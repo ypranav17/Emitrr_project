@@ -30,53 +30,64 @@ Generative SOAP Note: Utilizes a powerful Large Language Model (LLM) to generate
   - **Intent Detection:** `facebook/bart-large-mnli` (Zero-Shot)  
   - **SOAP Generation:** Google `Gemini-2.5-PRO`
 
-Setup and Installation
+## ⚙️ Setup and Installation
+
 Follow these instructions to set up and run the project locally.
 
-1. Prerequisites
-Python 3.11. It is highly recommended to use this specific version to avoid potential compilation issues with dependencies.
+---
 
-A Google AI Studio API Key for the SOAP Note generation feature.
+### 1. Prerequisites
+- Python **3.11** (recommended to avoid dependency issues).  
+- A **Google AI Studio API Key** for the SOAP Note generation feature.  
 
-2. Clone the Repository
-git clone [https://github.com/your-username/medical-ai-insights.git](https://github.com/your-username/medical-ai-insights.git)
-cd medical-ai-insights
+---
 
-3. Set Up a Virtual Environment
-Create and activate a virtual environment to manage project dependencies.
+### 2. Clone the Repository
+```bash
+git clone https://github.com/ypranav17/Emitrr_project.git
+cd Emitrr_project
 
-# For Windows
+2. Set Up a Virtual Environment
+
+Create and activate a virtual environment to manage dependencies.
+
+For Windows:
+
 python -m venv venv
 .\venv\Scripts\activate
 
-# For macOS/Linux
+For macOS/Linux:
+
 python3 -m venv venv
 source venv/bin/activate
 
-4. Install Dependencies
-Install all the required libraries from the requirements.txt file. The project is structured with the main app in the /UI directory and training scripts in /utils.
+3. Install Dependencies
 
-# Navigate to the root of the project where requirements.txt is located
+Install all the required libraries from requirements.txt.
+
 pip install -r requirements.txt
-pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cpu](https://download.pytorch.org/whl/cpu)
+
+Additionally, install PyTorch (CPU version), TorchVision, and Google Generative AI:
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 pip install google-generativeai
 
-5. Train the Custom Sentiment Model
-The sentiment analysis feature relies on a custom-trained model. Run the training script located in the /utils directory.
+4. Train the Custom Sentiment Model
 
-# Navigate to the utils directory
+The sentiment analysis feature relies on a custom-trained model.
+
+Navigate to the utils directory and run the training script:
+
 cd utils
-
-# Run the training script
 python train_sentiment_model.py
 
-This will create a final_sentiment_model folder inside /utils, which the main application will load.
+This will create a final_sentiment_model folder inside /utils, which the main application will use.
 
-6. Run the Streamlit Application
-Navigate to the /UI directory and run the main application script.
+5. Run the Streamlit Application
 
-# Navigate to the UI directory from the root
+After training the model, run the Streamlit app from the /UI directory.
+
 cd ../UI
-
-# Run the app
 streamlit run main_app.py
+
+
