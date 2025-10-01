@@ -63,5 +63,18 @@ pip install -r requirements.txt
 pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cpu](https://download.pytorch.org/whl/cpu)
 pip install google-generativeai
 ```
+### 5. Train the Custom Sentiment Model
+- The application requires the fine-tuned sentiment model. Navigate to the utils directory and run the training script
+```bash
+cd utils
+python train_sentiment_model.py
+```
+### 6. Launch the Streamlit Application
+- Navigate from the utils directory back to the UI directory to run the main app.
+```bash
+cd ../UI
+streamlit run main_app.py
+```
+The application will now be running in your browser.
 
 
