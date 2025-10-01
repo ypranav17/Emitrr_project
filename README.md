@@ -46,48 +46,16 @@ Follow these instructions to set up and run the project locally.
 ```bash
 git clone https://github.com/ypranav17/Emitrr_project.git
 cd Emitrr_project
+```bash
 
-2. Set Up a Virtual Environment
+---
 
-Create and activate a virtual environment to manage dependencies.
-
-For Windows:
-
+### 3. Create and Activate Virtual Environment
+```bash
+# For Windows
 python -m venv venv
 .\venv\Scripts\activate
 
-For macOS/Linux:
-
+# For macOS/Linux
 python3 -m venv venv
-source venv/bin/activate
-
-3. Install Dependencies
-
-Install all the required libraries from requirements.txt.
-
-pip install -r requirements.txt
-
-Additionally, install PyTorch (CPU version), TorchVision, and Google Generative AI:
-
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-pip install google-generativeai
-
-4. Train the Custom Sentiment Model
-
-The sentiment analysis feature relies on a custom-trained model.
-
-Navigate to the utils directory and run the training script:
-
-cd utils
-python train_sentiment_model.py
-
-This will create a final_sentiment_model folder inside /utils, which the main application will use.
-
-5. Run the Streamlit Application
-
-After training the model, run the Streamlit app from the /UI directory.
-
-cd ../UI
-streamlit run main_app.py
-
-
+source ven /bin/activate
