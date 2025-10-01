@@ -46,10 +46,7 @@ Follow these instructions to set up and run the project locally.
 ```bash
 git clone https://github.com/ypranav17/Emitrr_project.git
 cd Emitrr_project
-```bash
-
----
-
+```
 ### 3. Create and Activate Virtual Environment
 ```bash
 # For Windows
@@ -58,4 +55,13 @@ python -m venv venv
 
 # For macOS/Linux
 python3 -m venv venv
-source ven /bin/activate
+source venv/bin/activate
+```
+### 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cpu](https://download.pytorch.org/whl/cpu)
+pip install google-generativeai
+```
+
+
